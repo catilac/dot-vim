@@ -17,6 +17,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'nathanaelkane/vim-indent-guides'
 
 "let g:solarized_termcolors=256
 set background=dark
