@@ -7,6 +7,9 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'molokai'
 Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
 
 "execute pathogen#infect()
 "Helptags
@@ -145,7 +148,7 @@ vmap <C-c> :w !pbcopy<CR><CR>
 "  PLUGINS MAPPINGS
 " ------------------
 
-" file lookup
+" CtrlP file lookup
 map <leader>o :CtrlP<CR>
 map <leader>b :CtrlPBuffer<CR>
 map <leader>r :CtrlPMRU<CR>
