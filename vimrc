@@ -1,11 +1,11 @@
-execute pathogen#infect()
-Helptags
+"execute pathogen#infect()
+"Helptags
 syntax on
 
 "let g:solarized_termcolors=256
 set background=dark
-"colorscheme solarized
-colorscheme molokai
+""colorscheme solarized
+"colorscheme molokai
 let mapleader = ','
 filetype plugin on
 
@@ -34,11 +34,11 @@ set laststatus=2
 set cursorline                      " show current line
 set statusline=%<%f\                     " Filename
 set statusline+=%w%h%m%r                 " Options
-set statusline+=%{fugitive#statusline()} " Git Hotness
+"set statusline+=%{fugitive#statusline()} " Git Hotness
 set statusline+=\ [%{&ff}/%Y]            " Filetype
 set statusline+=\ [%{getcwd()}]          " Current dir
-set statusline+=%#warningmsg#                                                                                                                                                                                                          
-set statusline+=%{SyntasticStatuslineFlag()}                                
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 set ttyfast
@@ -132,10 +132,9 @@ vnoremap > >gv
 " copy visual block to osx clipboard
 vmap <C-c> :w !pbcopy<CR><CR>
 
-" Omnicomplete
-"inoremap <C-space> <C-x><C-o>
-
-" PLUGINS
+" ------------------
+"  PLUGINS MAPPINGS
+" ------------------
 
 " file lookup
 map <leader>o :CtrlP<CR>
