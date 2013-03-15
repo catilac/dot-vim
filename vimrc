@@ -14,6 +14,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'mileszs/ack.vim'
+Bundle 'tpope/vim-fugitive'
 
 "let g:solarized_termcolors=256
 set background=dark
