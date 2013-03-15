@@ -16,6 +16,7 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'tpope/vim-unimpaired'
 
 "let g:solarized_termcolors=256
 set background=dark
