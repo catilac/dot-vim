@@ -23,6 +23,7 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'honza/snipmate-snippets'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'garbas/vim-snipmate'
+Bundle 'Lokaltog/powerline'
 
 "let g:solarized_termcolors=256
 set background=dark
@@ -36,6 +37,16 @@ set noerrorbells visualbell t_vb=
 if has('autocmd')
   au GUIEnter * set visualbell t_vb=
 endif
+
+" speeds up timeout when hitting escape
+"if ! has('gui_running')
+    "set ttimeoutlen=100
+    "augroup FastEscape
+        "autocmd!
+        "au InsertEnter * set timeoutlen=0
+        "au InsertLeave * set timeoutlen=1000
+    "augroup END
+"endif
 
 set autoread                        " check if file is updated fromm outside
 set number                          " line numbers
@@ -52,14 +63,15 @@ set showcmd
 set virtualedit=onemore
 set history=1000                    " lines in history
 set laststatus=2
+set noshowmode
 set cursorline                      " show current line
 set statusline=%<%f\                     " Filename
 set statusline+=%w%h%m%r                 " Options
-"set statusline+=%{fugitive#statusline()} " Git Hotness
+set statusline+=%{fugitive#statusline()} " Git Hotness
 set statusline+=\ [%{&ff}/%Y]            " Filetype
 set statusline+=\ [%{getcwd()}]          " Current dir
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 set ttyfast
@@ -153,9 +165,12 @@ vnoremap > >gv
 " copy visual block to osx clipboard
 vmap <C-c> :w !pbcopy<CR><CR>
 
-" ------------------
-"  PLUGINS MAPPINGS
-" ------------------
+" ------------------------
+"  PLUGINS CONFIGURATIONS
+" ------------------------
+
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+let g:Powerline_symbols = 'fancy'
 
 " CtrlP file lookup
 map <leader>o :CtrlP<CR>
