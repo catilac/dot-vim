@@ -6,6 +6,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'molokai'
+Bundle 'kien/ctrlp.vim'
 
 "execute pathogen#infect()
 "Helptags
