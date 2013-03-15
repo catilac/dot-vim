@@ -1,5 +1,28 @@
-execute pathogen#infect()
-Helptags
+set nocompatible                    " not compatible with vi
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" bundles
+Bundle 'gmarik/vundle'
+Bundle 'molokai'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'majutsushi/tagbar'
+Bundle 'mileszs/ack.vim'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/vim-powerline'
+"Bundle 'scrooloose/syntastic'
+Bundle 'Indent-Guides'
+
+
+"execute pathogen#infect()
+"Helptags
 syntax on
 
 "let g:solarized_termcolors=256
@@ -16,7 +39,6 @@ if has('autocmd')
 endif
 
 set autoread                        " check if file is updated fromm outside
-set nocompatible                    " not compatible with vi
 set number                          " line numbers
 set expandtab                       " use spaces instead of tabs
 set tabstop=2                       " 1 tab = 2 spaces
@@ -34,11 +56,11 @@ set laststatus=2
 set cursorline                      " show current line
 set statusline=%<%f\                     " Filename
 set statusline+=%w%h%m%r                 " Options
-set statusline+=%{fugitive#statusline()} " Git Hotness
+"set statusline+=%{fugitive#statusline()} " Git Hotness
 set statusline+=\ [%{&ff}/%Y]            " Filetype
 set statusline+=\ [%{getcwd()}]          " Current dir
-set statusline+=%#warningmsg#                                                                                                                                                                                                          
-set statusline+=%{SyntasticStatuslineFlag()}                                
+"set statusline+=%#warningmsg#                                                                                                                                                                                                          
+"set statusline+=%{SyntasticStatuslineFlag()}                                
 set statusline+=%*
 set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 set ttyfast
@@ -138,25 +160,25 @@ vmap <C-c> :w !pbcopy<CR><CR>
 " PLUGINS
 
 " file lookup
-map <leader>o :CtrlP<CR>
-map <leader>b :CtrlPBuffer<CR>
-map <leader>r :CtrlPMRU<CR>
+"map <leader>o :CtrlP<CR>
+"map <leader>b :CtrlPBuffer<CR>
+"map <leader>r :CtrlPMRU<CR>
 
-" file browser
-map <C-o> <plug>NERDTreeTabsToggle<CR>
+"" file browser
+"map <C-o> <plug>NERDTreeTabsToggle<CR>
 
-" file structure
-nmap <C-t> :TagbarToggle<CR>gl
+"" file structure
+"nmap <C-t> :TagbarToggle<CR>gl
 
-" ack
-"let g:ackprg="/usr/local/bin/ack -H --nocolor --nogroup --column  --type=nohtml"
-let g:ackprg="/usr/local/bin/ack -H --nocolor --nogroup --column --ignore-dir=doc"
-map <leader>f :Ack<space>
+"" ack
+""let g:ackprg="/usr/local/bin/ack -H --nocolor --nogroup --column  --type=nohtml"
+"let g:ackprg="/usr/local/bin/ack -H --nocolor --nogroup --column --ignore-dir=doc"
+"map <leader>f :Ack<space>
 
-" syntastic, auto open/close on syntax errors
-let g:syntastic_ruby_exec='/usr/local/opt/ruby/bin/ruby'
-let g:syntastic_auto_loc_list=1
+"" syntastic, auto open/close on syntax errors
+"let g:syntastic_ruby_exec='/usr/local/opt/ruby/bin/ruby'
+"let g:syntastic_auto_loc_list=1
 
-" vim-rails
-map go <C-w>gf
+"" vim-rails
+"map go <C-w>gf
 
