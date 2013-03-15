@@ -1,3 +1,12 @@
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'molokai'
+
 "execute pathogen#infect()
 "Helptags
 syntax on
@@ -5,9 +14,9 @@ syntax on
 "let g:solarized_termcolors=256
 set background=dark
 ""colorscheme solarized
-"colorscheme molokai
+colorscheme molokai
 let mapleader = ','
-filetype plugin on
+filetype plugin indent on
 
 " turn annoyings error signals off
 set noerrorbells visualbell t_vb=
@@ -16,7 +25,6 @@ if has('autocmd')
 endif
 
 set autoread                        " check if file is updated fromm outside
-set nocompatible                    " not compatible with vi
 set number                          " line numbers
 set expandtab                       " use spaces instead of tabs
 set tabstop=2                       " 1 tab = 2 spaces
