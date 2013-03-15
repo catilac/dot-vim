@@ -1,5 +1,6 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
+syntax on
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -11,10 +12,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
-
-"execute pathogen#infect()
-"Helptags
-syntax on
+Bundle 'jistr/vim-nerdtree-tabs'
 
 "let g:solarized_termcolors=256
 set background=dark
