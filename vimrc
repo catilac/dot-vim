@@ -13,6 +13,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'mileszs/ack.vim'
 
 "let g:solarized_termcolors=256
 set background=dark
