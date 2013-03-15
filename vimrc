@@ -19,6 +19,10 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'tpope/vim-rails'
+Bundle 'tomtom/tlib_vim'
+Bundle 'honza/snipmate-snippets'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'garbas/vim-snipmate'
 
 "let g:solarized_termcolors=256
 set background=dark
