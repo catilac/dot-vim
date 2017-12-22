@@ -34,7 +34,6 @@ set laststatus=2
 set cursorline                      " show current line
 set statusline=%<%f\                     " Filename
 set statusline+=%w%h%m%r                 " Options
-set statusline+=%{fugitive#statusline()} " Git Hotness
 set statusline+=\ [%{&ff}/%Y]            " Filetype
 set statusline+=\ [%{getcwd()}]          " Current dir
 set statusline+=%#warningmsg#                                                                                                                                                                                                          
